@@ -20,12 +20,8 @@ export default {
     removeTodo: function (todoItem, index) {
       this.$emit('removeItem', todoItem, index);
     },
-    // eslint-disable-next-line no-unused-vars
     toggleComplete: function (todoItem, index) {
-      todoItem.completed = !todoItem.completed
-      // update local storage data
-      localStorage.removeItem(todoItem.item);
-      localStorage.setItem(todoItem.item, JSON.stringify(todoItem));
+      this.$emit('toggleItem', todoItem, index)
     }
   },
 }
