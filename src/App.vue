@@ -1,10 +1,8 @@
 <template>
   <div id="app">
-    <TodoHeader></TodoHeader>
+    <TodoHeader/>
     <TodoInput/>
-    <TodoList
-        v-bind:propsdata="todoItems"
-    />
+    <TodoList/>
     <TodoFooter/>
   </div>
 </template>
@@ -22,13 +20,6 @@ export default {
     TodoInput,
     TodoList,
     TodoFooter,
-  },
-  data() {
-    return {
-      todoItems: []
-    }
-  },
-  methods: {
   },
 }
 </script>
